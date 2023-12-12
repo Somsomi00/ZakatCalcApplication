@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_bckbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="335dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="back Button"
+        android:src="@drawable/left"
+        app:backgroundTint="#E8DA8A00" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCalc"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#E8DA8A00"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CDBF70"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbarCalc"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/GWeightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold Weight (grams):"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/GWeight_editText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/black"
+            android:hint="Enter gold weight in grams" />
+
+        <TextView
+            android:id="@+id/GType_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold Type:"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/GType_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/GType_keep"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:text="Keep" />
+
+            <RadioButton
+                android:id="@+id/GType_wear"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:text="Wear" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/GValue_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold Value per Gram:"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/GValue_editText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Gold Value per gram"
+            android:textColor="@android:color/black"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/calcButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8DA8A00"
+            android:text="Calculate Zakat"
+            android:layout_marginTop="16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/GWeight_minusUruf_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gold Weight Minus Uruf (RM): "
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/TotValue_GWeight_MinusUruf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/zakat_payable_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zakat Payable (RM): "
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/zakat_payable_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/totZakat_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Total Zakat (RM): "
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/totZakat_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8DA8A00"
+            android:layout_marginTop="16dp"
+            android:text="Reset" />
+
+    </LinearLayout>
+
+</RelativeLayout>

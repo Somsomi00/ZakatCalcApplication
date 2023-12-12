@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstructionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/instruction_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E8DA8A00 "
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:id="@+id/instructionLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/instruction_toolbar"
+        android:background="#CDBF70"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="392dp"
+            android:layout_height="581dp">
+
+            <TextView
+                android:id="@+id/instruction1"
+                android:layout_width="379dp"
+                android:layout_height="29dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="How to use Zakat Calculator"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/profile_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="193dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/zakat_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/instruction1" />
+
+            <TextView
+                android:id="@+id/info1"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Welcome to Zakat calculator application. This calculation helps you to estimate your zakat payment for gold keeping"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/instruction2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                app:layout_constraintVertical_bias="0.102" />
+
+            <TextView
+                android:id="@+id/instruction2"
+                android:layout_width="262dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="1. Insert your Gold Weight by Gram"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.615" />
+
+            <TextView
+                android:id="@+id/instruction3"
+                android:layout_width="268dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="2. Choose to keep or wear"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.67" />
+
+            <TextView
+                android:id="@+id/instruction4"
+                android:layout_width="265dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="3. Insert your Gold value per Gram"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.724" />
+
+            <Button
+                android:id="@+id/go_to_calculator_button"
+                android:layout_width="340dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="#E8DA8A00"
+                android:text="Go to Calculator"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/instruction4"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
